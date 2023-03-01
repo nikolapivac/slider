@@ -1,0 +1,12 @@
+body {
+    margin: 0;
+    font-family: $font;
+}
+
+.main {
+    max-width: 940px;
+    height: 100vh;
+    @include flexBetween(column);
+    width: 940px;
+    margin: 0 auto;  
+}

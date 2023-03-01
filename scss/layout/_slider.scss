@@ -1,0 +1,31 @@
+.middle {
+    width: 940px;
+    @include flex(row);
+    gap: 20px;
+    transform: translateX(-100%);
+
+    .slider {
+        @include flex(column);
+        gap: 10px;
+
+        .first {
+            @include flex(row);
+            margin: 0;
+        }
+
+        .second-row {
+            @include flexBetween(row);
+
+            .second {
+                @include flex(row);
+                margin: 0;
+            }
+
+            .arrows {
+                @include flex(column);
+                gap: 10px;
+            }
+        }
+    }
+
+}

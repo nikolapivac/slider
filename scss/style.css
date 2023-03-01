@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap");
+body {
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.main {
+  max-width: 940px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 940px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+}
+.header .header1,
+.header .header2 {
+  background-color: #dddddd;
+  height: 100px;
+  border-radius: 0 0 5px 5px;
+}
+.header .header1 {
+  width: 300px;
+}
+.header .header2 {
+  width: 620px;
+  margin-left: 20px;
+}
+
+.footer {
+  width: 940px;
+  height: 100px;
+  background-color: #dddddd;
+  border-radius: 5px 5px 0 0;
+}
+
+.middle {
+  width: 940px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  transform: translateX(-100%);
+}
+.middle .slider {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.middle .slider .first {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+.middle .slider .second-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.middle .slider .second-row .second {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+.middle .slider .second-row .arrows {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.prev,
+.next {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  background-color: white;
+}
+.prev:hover,
+.next:hover {
+  border-color: #134880;
+  cursor: pointer;
+}
+.prev:hover img.visible,
+.next:hover img.visible {
+  opacity: 0;
+}
+.prev:hover img.hidden,
+.next:hover img.hidden {
+  opacity: 1;
+}
+.prev img,
+.next img {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  transition: opacity 0.1s;
+}
+
+.text h1 {
+  width: 300px;
+  color: #134880;
+  font-size: 32px;
+  line-height: 37.5px;
+  font-weight: 700;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  margin: 0;
+}
+.text p {
+  width: 300px;
+  color: #484A4C;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.picture {
+  margin: 0 0 5px 10px;
+  padding: 0;
+  height: 200px;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/*# sourceMappingURL=style.css.map */
