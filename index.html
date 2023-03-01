@@ -3,48 +3,61 @@
     <head>
         <meta charset="utf-8">
         <title>Slider</title>
-        <link rel="stylesheet" href="./style.css">
-        <script src="./main.js" defer></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <link rel="stylesheet" href="./scss/style.min.css">
     </head>
     <body>
         <div class="main">
-            <div class="slider-container">
-                <ul class="first">
-                    <li class="picture"><img src="assets/slider-image-7.jpg" /></li>
-                    <li class="picture"><img src="assets/slider-image-6.jpg" /></li>
-                    <li class="picture"><img src="assets/slider-image-9.jpg" /></li>
-                    <li class="picture"><img src="assets/slider-image-8.jpg" /></li>
-                    <li class="picture"><img src="assets/slider-image-5.jpg" /></li>
-                </ul>
-                <div class="second-row">
-                    <ul class="second">
-                        <li class="picture"><img src="assets/slider-image-4.jpg" /></li>
-                        <li class="picture"><img src="assets/slider-image-1.jpg" /></li>
-                        <li class="picture"><img src="assets/slider-image-2.jpg" /></li>
-                        <li class="picture"><img src="assets/slider-image-3.jpg" /></li>
-                    </ul>
-                    <div class="arrows">
-                        <div class="prev">
-                            <img src="assets/arrow-blue-left.png" class="hidden"/>
-                            <img src="assets/arrow-gray-left.png" class="visible"/>
+            <div class="header">
+                <div class="header1"></div>
+                <div class="header2"></div>
+            </div>
+            <div class="middle">
+                <div class="slider">
+                    <div class="first">
+                        <img class="picture" src="assets/slider-image-7.jpg" />
+                        <img class="picture" src="assets/slider-image-6.jpg" />
+                        <img class="picture" src="assets/slider-image-9.jpg" />
+                        <img class="picture"src="assets/slider-image-8.jpg" />
+                        <img class="picture"src="assets/slider-image-5.jpg" />
+                        <img class="picture" src="assets/slider-image-7.jpg" />
+                        <img class="picture" src="assets/slider-image-6.jpg" />
+                        <img class="picture" src="assets/slider-image-9.jpg" />
+                    </div>
+                    <div class="second-row">
+                        <div class="second">
+                            <img class="picture" src="assets/slider-image-4.jpg" />
+                            <img class="picture" src="assets/slider-image-1.jpg" />
+                            <img class="picture" src="assets/slider-image-2.jpg" />
+                            <img class="picture" src="assets/slider-image-3.jpg" />
+                            <img class="picture" src="assets/slider-image-4.jpg" />
+                            <img class="picture" src="assets/slider-image-1.jpg" />
                         </div>
-                        <div class="next">
-                            <img src="assets/arrow-blue-right.png" class="hidden"/>
-                            <img src="assets/arrow-gray-right.png" class="visible"/>
+                        <div class="arrows">
+                            <button class="prev">
+                                <img src="assets/arrow-blue-left.png" class="hidden"/>
+                                <img src="assets/arrow-gray-left.png" class="visible"/>
+                            </button>
+                            <button class="next">
+                                <img src="assets/arrow-blue-right.png" class="hidden"/>
+                                <img src="assets/arrow-gray-right.png" class="visible"/>
+                            </button>
                         </div>
                     </div>
                 </div>
+                <div class="text">
+                    <h1>Lorem ipsum dolor sit amet consectetuer adipiscing elit</h1>
+                    <p>
+                        Ut wisi enim ad minim veniam, quis
+                        nostrud exerci tution ullamcorper
+                        suscipit lobortis nisi ut aliquip ex ea
+                        commodo consequat. Duis autem dolor in
+                        hendrerit in vulputate velit esse molestie consequat.
+                    </p>
+                </div>
             </div>
-            <div class="text">
-                <h1>Lorem ipsum dolor sit amet consectetuer adipiscing elit</h1>
-                <p>
-                    Ut wisi enim ad minim veniam, quis
-                    nostrud exerci tution ullamcorper
-                    suscipit lobortis nisi ut aliquip ex ea
-                    commodo consequat. Duis autem dolor in
-                    hendrerit in vulputate velit esse molestie consequat.
-                </p>
-            </div>
+            <div class="footer"></div>
         </div>
+        <script src="./js/main.js"></script>
     </body>
 </html>
