@@ -1,19 +1,38 @@
-function handleNextClick() {
-    $("div.first > img:last-child").remove().prependTo(".first");
-    $("div.second > img:last-child").remove().prependTo(".second");
-}
-
-function handlePrevClick() {
-    $("div.first > img:first-child").remove().appendTo(".first");
-    $("div.second > img:first-child").remove().appendTo(".second");
-}
-
 $(document).ready(function() {
-    $(".prev").click(function(){
-        handlePrevClick();
+    $(".next").click(function(){
+        $(".prev, .next").prop("disabled", true);
+
+        let lastTop = $("div.first > img:last-child");
+        let lastBottom = $("div.second > img:last-child");
+
+        $(".first img").animate({left: `${lastTop.width()}`}, 500, function() {
+            $(".first img").css({left: 0});
+            lastTop.remove().prependTo(".first");
+            $(".next, .prev").prop("disabled", false);
+        });
+        $(".second img").animate({left: `${lastBottom.width()}`}, 500, function() {
+            $(".second img").css({left: 0});
+            lastBottom.remove().prependTo(".second");
+            $(".next, .prev").prop("disabled", false);
+        }); 
     })
 
-    $(".next").click(function(){
-        handleNextClick();
+    $(".prev").click(function(){
+        $(".prev, .next").prop("disabled", true);
+        
+        let firstTop = $("div.first > img:first-child");
+        let firstBottom = $("div.second > img:first-child");
+
+        $(".first img").animate({right: `${firstTop.width()}`}, 500, function() {
+            $(".first img").css({right: 0});
+            firstTop.remove().appendTo(".first");
+            $(".next, .prev").prop("disabled", false);
+        });
+
+        $(".second img").animate({right: `${firstBottom.width()}`}, 500, function() {
+            $(".second img").css({right: 0});
+            firstBottom.remove().appendTo(".second");
+            $(".next, .prev").prop("disabled", false);
+        }); 
     })
 })

@@ -11,6 +11,7 @@
         .first {
             @include flex(row);
             margin: 0;
+            overflow: hidden;
         }
 
         .second-row {
@@ -19,6 +20,7 @@
             .second {
                 @include flex(row);
                 margin: 0;
+                overflow: hidden;
             }
 
             .arrows {
