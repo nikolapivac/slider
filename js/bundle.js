@@ -6,17 +6,17 @@ $(document).ready(function () {
     var lastTop = $("div.first > img:last-child");
     var lastBottom = $("div.second > img:last-child");
     $(".first img").animate({
-      left: "".concat(lastTop.width())
-    }, 500, function () {
+      left: "".concat(lastTop.width() + 10)
+    }, 1000, "linear", function () {
       $(".first img").css({
         left: 0
       });
       lastTop.remove().prependTo(".first");
-      $(".next, .prev").prop("disabled", false);
+      $(".next,.prev").prop("disabled", false);
     });
     $(".second img").animate({
-      left: "".concat(lastBottom.width())
-    }, 500, function () {
+      left: "".concat(lastBottom.width() + 10)
+    }, 1000, "linear", function () {
       $(".second img").css({
         left: 0
       });
@@ -29,19 +29,19 @@ $(document).ready(function () {
     var firstTop = $("div.first > img:first-child");
     var firstBottom = $("div.second > img:first-child");
     $(".first img").animate({
-      right: "".concat(firstTop.width())
-    }, 500, function () {
+      left: "".concat(-(firstTop.width() + 10))
+    }, 1000, "linear", function () {
       $(".first img").css({
-        right: 0
+        left: 0
       });
       firstTop.remove().appendTo(".first");
       $(".next, .prev").prop("disabled", false);
     });
     $(".second img").animate({
-      right: "".concat(firstBottom.width())
-    }, 500, function () {
+      left: "".concat(-(firstBottom.width() + 10))
+    }, 1000, "linear", function () {
       $(".second img").css({
-        right: 0
+        left: 0
       });
       firstBottom.remove().appendTo(".second");
       $(".next, .prev").prop("disabled", false);

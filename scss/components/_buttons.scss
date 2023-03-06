@@ -24,6 +24,10 @@
         transform: translate(-50%, -50%);
         opacity: 1;
         transition: opacity 0.1s;
+        
+        &.hidden{
+            opacity: 0;
+        }
 
     }
 }
